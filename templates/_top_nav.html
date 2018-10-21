@@ -1,0 +1,13 @@
+<div class="container">
+	<nav class="blog-nav">
+		{% if session['user'] %}
+		  <a class="pull-right blog-nav-item" href="{{ url_for('logout') }}">Logout</a>
+		  <a class="pull-right blog-nav-item" href="{{ url_for('create_post') }}">Create Post</a>
+			<p class="pull-right blog-nav-item">Welcome {{ session['user'] }}</p>
+		{% else %}
+			<a class="pull-right blog-nav-item" href="{{ url_for('login') }}">Login</a>
+		{% endif %}
+	  <a class="blog-nav-item active" href="{{ url_for('post_list') }}">Home</a>
+	  <a class="blog-nav-item" href="#">About</a>
+	</nav>
+</div>
