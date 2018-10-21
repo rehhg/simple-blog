@@ -1,4 +1,3 @@
-import os
 from abc import ABCMeta
 from pymongo import MongoClient
 from bson.objectid import ObjectId
